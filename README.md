@@ -2,7 +2,6 @@
 
 ### Build your own image
 `$ cd /the_directory_containing_Dockerfile/`
-
 `$ docker build -t rockylinux_lamp .`
 
 or
@@ -11,7 +10,7 @@ or
 `$ docker pull hiepdng/rockylinux_lamp:latest`
 
 
-
+<br/>
 ### Run the Containers
 - **Apache container**
 ```
