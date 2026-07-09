@@ -4,9 +4,12 @@
 `$ cd /the_directory_containing_Dockerfile/`\
 `$ docker build -t rockylinux_lamp .`
 
-or\
-### **Pull image from dockerhub**\
+or
+### Pull image from dockerhub
 `$ docker pull hiepdng/rockylinux_lamp:latest`  
+
+
+
 
 
 ### Run the Containers
