@@ -31,3 +31,5 @@ RUN chmod +x ./entrypoint_httpd.sh
 
 COPY entrypoint_mysql.sh ./entrypoint_mysql.sh
 RUN chmod +x ./entrypoint_mysql.sh
+
+COPY index.php /var/www/html
