@@ -1,16 +1,16 @@
 ## Building Docker image: Rocky Linux 9 with LAMP Stack
 
-### ○ Build your own image:
+### ► Build your own image:
 `$ cd /the_directory_containing_Dockerfile/`\
 `$ docker build -t rockylinux_lamp .`  
 
 or
-### ○ Pull image from dockerhub:
+### ► Pull image from dockerhub:
 `$ docker pull hiepdng/rockylinux_lamp:latest`
 
 <br/>
 
-### ○ Run the Containers:
+### ► Run the Containers:
 - **Run Apache container**
 ```
 bash
@@ -36,7 +36,7 @@ docker run -d \
 
 <br/>
 
-### ○ Basic docker commands:
+### ► Basic docker commands:
 ```
 $ docker pull <image_name>       – Pulls an image from dockerhub
 $ docker image ls                – Lists all locally stored Docker images on your host system
@@ -53,7 +53,7 @@ $ docker exec -it <containerID> bash – Opens an interactive command-line termi
 
 <br/>
 
-### ○ Build Rocky Linux 9 with systemd and pre-installed utilies:
+### ► Build Rocky Linux 9 with systemd and pre-installed utilies:
 You can build images with provided Dockerfile files:
 
 - **Dockerfile_Networking_Tools** - Rocky Linux with networking Tools installed
