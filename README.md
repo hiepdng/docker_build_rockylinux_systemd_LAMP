@@ -42,7 +42,9 @@ bash
 docker run -d \
   --name rocky_lamp_web \
   -p 8080:80 \
-  -v /home/app/html:/var/www/html \
+  -v /home/app/apache/html:/var/www/html \
+  -v /home/app/apache/log:/var/log/httpd \
+  -v /home/app/apache/conf:/etc/apache2 \
   --entrypoint ./entrypoint_httpd.sh \
   rockylinux_lamp
 ```
@@ -57,9 +59,11 @@ docker run -d \
   -p 3306:3306 \
   -v /home/app/mysql/data:/var/lib/mysql \
   -v /home/app/mysql/log:/var/log/mysql \
-  -e MYSQL_ROOT_PASSWORD="your_root_password" \
-  -e MYSQL_USER="your_custom_username" \
-  -e MYSQL_PASSWORD="your_custom_password" \
+  -v /home/app/mysql/data:/var/lib/mysql \
+  -v /home/app/mysql/log:/var/log/mysql \
+  -e MYSQL_ROOT_PASSWORD="secretpassword" \
+  -e MYSQL_USER="mysql" \
+  -e MYSQL_PASSWORD="secretpassword" \
   --entrypoint ./entrypoint_mysql.sh \
    rockylinux_lamp
 ```
