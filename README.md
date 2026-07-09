@@ -1,4 +1,4 @@
-# Building Docker image: Rocky Linux 9 with LAMP
+# Building Docker image: Rocky Linux 9 with LAMP Stack
 
 ### Build your own image
 `$ cd /the_directory_containing_Dockerfile/`\
