@@ -33,3 +33,9 @@ COPY entrypoint_mysql.sh ./entrypoint_mysql.sh
 RUN chmod +x ./entrypoint_mysql.sh
 
 COPY index.php /var/www/html
+
+
+
+VOLUME ["/var/log/nginx", "/var/www/html"]
+VOLUME /data
+
