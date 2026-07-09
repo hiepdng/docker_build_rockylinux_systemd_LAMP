@@ -8,6 +8,8 @@ or
 ### Pull image from dockerhub
 `$ docker pull hiepdng/rockylinux_lamp:latest`  
 
+<br>
+<br>
 ### Run the Containers
 - **Apache container**
 ```
