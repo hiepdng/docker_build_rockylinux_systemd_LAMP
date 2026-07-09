@@ -2,10 +2,9 @@
 
 ### Build your own image
 `$ cd /the_directory_containing_Dockerfile/`\
-`$ docker build -t rockylinux_lamp .`
+`$ docker build -t rockylinux_lamp .`  
 
-```
-```
+
 ### Pull image from dockerhub
 `$ docker pull hiepdng/rockylinux_lamp:latest`
 
