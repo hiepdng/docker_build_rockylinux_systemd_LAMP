@@ -26,6 +26,7 @@ docker run -d \
 bash
 
 docker run -d \
+  --cap-add=SYS_NICE \
   --name rocky_lamp_db \
   -p 3306:3306 \
   -e MYSQL_ROOT_PASSWORD=your_root_password \
