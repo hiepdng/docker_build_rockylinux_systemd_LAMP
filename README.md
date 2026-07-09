@@ -11,6 +11,28 @@ or
 <br/>
 
 ### Run the Containers:
+
+- **Run both Apache and MySQL in one container**
+```
+bash
+
+docker run -d \
+  --cap-add=SYS_NICE \
+  --name rocky_lamp \
+  -p 8080:80
+  -v /home/app/html:/var/www/html
+  -p 3306:3306 \
+  -v /home/app/mysql/data:/var/lib/mysql
+  -v /home/app/mysql/log:/var/log/mysql
+  -e MYSQL_ROOT_PASSWORD="your_root_password" \
+  -e MYSQL_USER="your_custom_username" \
+  -e MYSQL_PASSWORD="your_custom_password" \
+  --entrypoint ./entrypoint_httpd_mysql.sh
+   rockylinux_lamp
+```
+
+or
+
 - **Run Apache container**
 ```
 bash
@@ -18,6 +40,8 @@ bash
 docker run -d \
   --name rocky_lamp_web
   -p 8080:80
+  -v /home/app/html:/var/www/html
+  --entrypoint ./entrypoint_httpd.sh
   rockylinux_lamp
 ```
 
@@ -34,6 +58,7 @@ docker run -d \
   -e MYSQL_ROOT_PASSWORD="your_root_password" \
   -e MYSQL_USER="your_custom_username" \
   -e MYSQL_PASSWORD="your_custom_password" \
+  --entrypoint ./entrypoint_mysql.sh
    rockylinux_lamp
 ```
 
