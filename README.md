@@ -5,7 +5,7 @@
 `$ docker build -t rockylinux_lamp .`
 
 or
-### Pull image from dockerhub
+**Pull image from dockerhub**
 `$ docker pull hiepdng/rockylinux_lamp:latest`  
 
 
