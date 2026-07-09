@@ -40,9 +40,3 @@ VOLUME /var/lib/mysql
 VOLUME /var/log/mysql
 VOLUME /etc/apache2
 
-VOLUME ["/home/app/apache/html", "/var/www/html"]
-VOLUME ["/home/app/apache/", "/var/log/httpd"]
-VOLUME ["/home/app/apache/conf", "/etc/apache2"]
-VOLUME ["/home/app/mysql/data", "/var/lib/mysql"]
-VOLUME ["/home/app/mysql/log", "/var/log/mysql"]
-
