@@ -10,7 +10,6 @@ or
 `$ docker pull hiepdng/rockylinux_lamp:latest`
 
 
-<br/>
 ### Run the Containers
 - **Apache container**
 ```
