@@ -51,7 +51,7 @@ $ docker exec -it <containerID> bash – Opens an interactive command-line termi
                                        container that is already running.
 ```
 
-<br><br>
+<br/>
 
 ### Build Rocky Linux 9 with systemd and pre-installed utilies:
 You can build images with provided Dockerfile files:
