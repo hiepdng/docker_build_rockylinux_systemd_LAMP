@@ -11,7 +11,8 @@ or
 `$ docker pull hiepdng/rockylinux_lamp:latest`
 
 
-### Run the Container
+### Run the Containers
+- **Apache container**
 ```
 bash
 
@@ -21,6 +22,7 @@ docker run -d \
   rockylinux_lamp
 ```
 
+- **MySQL container**
 ```
 bash
 
