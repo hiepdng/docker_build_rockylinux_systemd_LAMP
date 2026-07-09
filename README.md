@@ -10,7 +10,8 @@ or
 ### Pull image from dockerhub
 `$ docker pull hiepdng/rockylinux_lamp:latest`
 
-<br>
+
+\
 ### Run the Containers
 - **Apache container**
 ```
@@ -35,7 +36,8 @@ docker run -d \
    rockylinux_lamp
 ```
 
-<br>
+
+\
 ### Basic docker commands:
 ```
 $ docker pull <image_name>       – Pulls an image from dockerhub
