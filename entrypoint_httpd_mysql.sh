@@ -20,7 +20,7 @@ done
 
 # Secure / set root password if needed (Optional: change 'secretpassword')
 mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'secretpassword'; FLUSH PRIVILEGES;"
-mysql -u root -e "CREATE USER 'mysql'@'localhost' IDENTIFIED BY 'secretpassword'";
+mysql -u root -e "CREATE USER 'mysql'@'localhost' IDENTIFIED BY 'secretpassword'; FLUSH PRIVILEGES;";
 
 
 # Start Apache HTTPD in the foreground
