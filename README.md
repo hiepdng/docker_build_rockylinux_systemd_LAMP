@@ -10,8 +10,8 @@
 
 <br/>
 
-### Run the Containers
-- **Apache container**
+### Run the Containers:
+- **Run Apache container**
 ```
 bash
 
@@ -21,7 +21,7 @@ docker run -d \
   rockylinux_lamp
 ```
 
-- **MySQL container**
+- **Run MySQL container**
 ```
 bash
 
