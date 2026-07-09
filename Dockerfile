@@ -34,8 +34,15 @@ RUN chmod +x ./entrypoint_mysql.sh
 
 COPY index.php /var/www/html
 
+VOLUME /var/www/html
+VOLUME /var/log/httpd
+VOLUME /var/lib/mysql
+VOLUME /var/log/mysql
+VOLUME /etc/apache2
 
-
-VOLUME ["/var/log/nginx", "/var/www/html"]
-VOLUME /data
+VOLUME ["/home/app/apache/html", "/var/www/html"]
+VOLUME ["/home/app/apache/", "/var/log/httpd"]
+VOLUME ["/home/app/apache/conf", "/etc/apache2"]
+VOLUME ["/home/app/mysql/data", "/var/lib/mysql"]
+VOLUME ["/home/app/mysql/log", "/var/log/mysql"]
 
