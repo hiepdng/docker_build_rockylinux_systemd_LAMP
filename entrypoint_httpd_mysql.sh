@@ -25,4 +25,4 @@ mysql -u root -e "CREATE USER 'mysql'@'localhost' IDENTIFIED BY 'secretpassword'
 
 # Start Apache HTTPD in the foreground
 echo "Starting Apache HTTP Server..."
-exec /usr/sbin/httpd -DFOREGROUND
+exec /usr/sbin/httpd -D FOREGROUND
