@@ -19,8 +19,8 @@ until mysqladmin ping &>/dev/null; do
 done
 
 # Secure / set root password if needed (Optional: change 'secretpassword')
-mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'password123'; FLUSH PRIVILEGES;"
-mysql -u root -e "CREATE USER 'mysql'@'localhost' IDENTIFIED BY 'password123'";
+mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'secretpassword'; FLUSH PRIVILEGES;"
+mysql -u root -e "CREATE USER 'mysql'@'localhost' IDENTIFIED BY 'secretpassword'";
 
 
 # Start Apache HTTPD in the foreground
