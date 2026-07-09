@@ -34,8 +34,8 @@ docker run -d \
 ```
 
 or
-
-- **Run Apache container**
+- **Run both Apache and MySQL in separate containers**
+  - **Run Apache container**
 ```
 bash
 
@@ -49,7 +49,7 @@ docker run -d \
   rockylinux_lamp
 ```
 
-- **Run MySQL container**
+  - **Run MySQL container**
 ```
 bash
 
