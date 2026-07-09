@@ -34,7 +34,7 @@ docker run -d \
    rockylinux_lamp
 ```
 
-
+<br\>
 
 ### Basic docker commands:
 ```
