@@ -29,9 +29,11 @@ docker run -d \
   --cap-add=SYS_NICE \
   --name rocky_lamp_db \
   -p 3306:3306 \
-  -e MYSQL_ROOT_PASSWORD=your_root_password \
-  -e MYSQL_USER=your_custom_username \
-  -e MYSQL_PASSWORD=your_custom_password \
+  -v /home/app/mysql/data:/var/lib/mysql
+  -v /home/app/mysql/log:/var/log/mysql
+  -e MYSQL_ROOT_PASSWORD="your_root_password" \
+  -e MYSQL_USER="your_custom_username" \
+  -e MYSQL_PASSWORD="your_custom_password" \
    rockylinux_lamp
 ```
 
