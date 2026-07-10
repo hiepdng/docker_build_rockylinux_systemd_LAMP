@@ -1,4 +1,6 @@
 #!/bin/bash
+# start systemd
+/usr/sbin/init
 
 # Ensure MySQL directories have correct permissions
 mkdir -p /var/run/mysqld
