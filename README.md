@@ -24,7 +24,6 @@ docker run -d \
   -p 8080:80 \
   -v /home/app/apache/html:/var/www/html \
   -v /home/app/apache/log:/var/log/httpd \
-  -v /home/app/apache/httpd:/etc/httpd \
   -p 3306:3306 \
   -v /home/app/mysql/data:/var/lib/mysql \
   -v /home/app/mysql/log:/var/log/mysql \
