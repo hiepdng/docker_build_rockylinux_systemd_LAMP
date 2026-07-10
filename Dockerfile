@@ -23,9 +23,6 @@ RUN groupadd -g 1100 data
 RUN useradd --home /home/web_user --gid 1000 -m --shell /bin/bash --uid 1000 --comment "web_user" web_user
 RUN useradd --home /home/data_user --gid 1100 -m --shell /bin/bash --uid 1100 --comment "data_user" data_user
 
-RUN echo "ServerName localhost" >> /etc/httpd/conf/httpd.conf
-
-
 # Expose HTTP port
 EXPOSE 80 443 3306
 
