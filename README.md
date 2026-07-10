@@ -61,6 +61,7 @@ $ docker ps                      – Lists all currently running Docker containe
 $ docker ps -a                   – lists all Docker container IDs on your system, regardless of their current status. 
 $ docker stop <containerID>      – Gracefully shuts down a running Docker container
 $ docker start <containerID>     – Resumes and boots up stopped Docker container
+$ docker rm <containerID>        – Remove Docker container
 
 $ docker exec -it <containerID> bash – Opens an interactive command-line terminal (Bash) inside a Docker
                                        container that is already running.
