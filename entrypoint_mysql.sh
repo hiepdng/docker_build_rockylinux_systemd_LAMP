@@ -9,8 +9,10 @@ chown -R mysql:mysql /var/run/mysqld /var/lib/mysql
 if [ ! -d '/var/lib/mysql/mysql' ]; then
   mysqld --initialize-insecure;
 fi;
-exec mysqld --user=mysql --datadir=/var/lib/mysql --skip-networking=0
+exec mysqld --user=mysql --datadir=/var/lib/mysql --skip-networking=0 &
 
+# Wait for MySQL to completely start up
+sleep 20
 
 # Wait for MySQL to fully boot up
 echo "Waiting for MySQL to start..."
