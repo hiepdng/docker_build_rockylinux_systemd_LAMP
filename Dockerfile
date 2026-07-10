@@ -6,6 +6,7 @@ RUN <<EOF
 dnf -y update
 dnf install -y epel-release dnf-plugins-core
 dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
+dnf -y module reset php
 dnf module enable -y php:remi-8.4
 dnf -y install httpd
 dnf -y install mysql-server
