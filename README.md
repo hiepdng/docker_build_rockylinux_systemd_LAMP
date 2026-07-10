@@ -43,7 +43,7 @@ docker run -d \
   -e MYSQL_PASSWORD="secretpassword" \
    rockylinux_lamp
 
-# Running php-fpm, mysqld and httpd services:
+# Starting php-fpm, mysqld and httpd services:
 docker exec -it <containerID> ./entrypoint.sh
 ```
 - **Testing**  
