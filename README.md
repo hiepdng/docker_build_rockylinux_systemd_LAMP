@@ -11,11 +11,22 @@ or
 <br/>
 
 ### Run the Containers:
+- **Pre-configuration on host machine**
+```
+bash
+
+mkdir -p  /home/app/apache/html
+mkdir -p  /home/app/apache/log
+chmod -R 777 mkdir -p  /home/app/apache
+mkdir -p /home/app/mysql/data
+mkdir -p /home/app/mysql/log 
+```
 
 - **Run both Apache and MySQL in one container**
 ```
 bash
 
+# Creating container:
 docker run -d \
   --name rocky_lamp \
   --privileged \
@@ -31,42 +42,9 @@ docker run -d \
   -e MYSQL_USER="mysql" \
   -e MYSQL_PASSWORD="secretpassword" \
    rockylinux_lamp
-```
 
-or
-- **Run both Apache and MySQL in separate containers**
-  - **Run Apache container**
-```
-bash
-
-docker run -d \
-  --cap-add=SYS_NICE \
-  --name rocky_lamp_web \
-  -p 8080:80 \
-  -v /home/app/apache/html:/var/www/html \
-  -v /home/app/apache/log:/var/log/httpd \
-  -v /home/app/apache/httpd:/etc/httpd \
-  --entrypoint ./entrypoint_httpd.sh \
-  rockylinux_lamp
-```
-
-  - **Run MySQL container**
-```
-bash
-
-docker run -d \
-  --cap-add=SYS_NICE \
-  --name rocky_lamp_db \
-  -p 3306:3306 \
-  -v /home/app/mysql/data:/var/lib/mysql \
-  -v /home/app/mysql/log:/var/log/mysql \
-  -v /home/app/mysql/data:/var/lib/mysql \
-  -v /home/app/mysql/log:/var/log/mysql \
-  -e MYSQL_ROOT_PASSWORD="secretpassword" \
-  -e MYSQL_USER="mysql" \
-  -e MYSQL_PASSWORD="secretpassword" \
-  --entrypoint ./entrypoint_mysql.sh \
-   rockylinux_lamp
+# Running php-fpm, mysqld and httpd services:
+docker exec -it <containerID> ./entrypoint.sh
 ```
 
 <br/>
