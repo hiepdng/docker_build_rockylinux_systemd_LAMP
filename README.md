@@ -18,8 +18,8 @@ bash
 
 docker run -d \
   --name rocky_lamp \
-  --privileged
-  -v /sys/fs/cgroup:/sys/fs/cgroup:rw
+  --privileged \
+  -v /sys/fs/cgroup:/sys/fs/cgroup:rw \
   --cap-add=SYS_NICE \
   -p 8080:80 \
   -v /home/app/apache/html:/var/www/html \
