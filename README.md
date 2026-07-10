@@ -46,7 +46,7 @@ docker run -d \
 # Running php-fpm, mysqld and httpd services:
 docker exec -it <containerID> ./entrypoint.sh
 ```
-- **Testing**
+- **Testing**  
 Open a web browser and enter http://localhost:8080/index.php at the URL
 
 <br/>
