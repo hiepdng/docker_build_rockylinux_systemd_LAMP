@@ -9,7 +9,7 @@ dnf install -y https://rpms.remirepo.net/enterprise/remi-release-9.rpm
 dnf module enable -y php:remi-8.4
 dnf -y install httpd
 dnf -y install mysql-server
-dnf -y install php php-fpm php-cli php-mysqlnd php-zip php-gd php-mcrypt php-mbstring php-xml php-json
+dnf -y install php php-cli php-mysqlnd php-zip php-gd php-mcrypt php-mbstring php-xml php-json
 #dnf -y install mod_ssl
 dnf clean all
 EOF
