@@ -17,8 +17,10 @@ or
 bash
 
 docker run -d \
-  --cap-add=SYS_NICE \
   --name rocky_lamp \
+  --privileged
+  -v /sys/fs/cgroup:/sys/fs/cgroup:rw
+  --cap-add=SYS_NICE \
   -p 8080:80 \
   -v /home/app/apache/html:/var/www/html \
   -v /home/app/apache/log:/var/log/httpd \
@@ -29,7 +31,6 @@ docker run -d \
   -e MYSQL_ROOT_PASSWORD="secretpassword" \
   -e MYSQL_USER="mysql" \
   -e MYSQL_PASSWORD="secretpassword" \
-  --entrypoint ./entrypoint_httpd_mysql.sh \
    rockylinux_lamp
 ```
 
