@@ -11,6 +11,6 @@ $conn = new mysqli($host, $user, $pass);
 if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 } 
-echo "<p style='color:green;'>✔ Successfully connected to MariaDB Database!</p>";
+echo "<p style='color:green;'>✔ Successfully connected to MySQL Database!</p>";
 phpinfo();
 ?>
