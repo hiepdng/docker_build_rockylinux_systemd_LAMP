@@ -40,6 +40,7 @@ or
 bash
 
 docker run -d \
+  --cap-add=SYS_NICE \
   --name rocky_lamp_web \
   -p 8080:80 \
   -v /home/app/apache/html:/var/www/html \
