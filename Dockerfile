@@ -26,11 +26,6 @@ dnf -y install procps-ng
 dnf clean all
 EOF
 
-RUN groupadd -g 1000 web
-RUN groupadd -g 1100 data
-RUN useradd --home /home/web_user --gid 1000 -m --shell /bin/bash --uid 1000 --comment "web_user" web_user
-RUN useradd --home /home/data_user --gid 1100 -m --shell /bin/bash --uid 1100 --comment "data_user" data_user
-
 # Expose HTTP port
 EXPOSE 80 443 3306
 
