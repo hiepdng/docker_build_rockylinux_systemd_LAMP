@@ -1,7 +1,6 @@
 ## Building Docker image: Rocky Linux 9 systemd with LAMP Stack
 
-### Build your own image:
-`$ cd /the_directory_containing_Dockerfile/`\
+### Build your own image:  
 `$ docker build -t rockylinux_lamp .`  
 
 or
